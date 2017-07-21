@@ -42,11 +42,11 @@ module Rails #:nodoc:
                 }
             end
             
-            begin
-                config.send(:app_generators).orm :couchbase_orm, :migration => false
-            rescue
-                puts "couchbase_orm not fully loaded, config aborted"
-            end
+            #begin
+            #    config.send(:app_generators).orm :couchbase_orm, :migration => false
+            #rescue
+            #    puts "couchbase_orm not fully loaded, config aborted"
+            #end
 
             if config.action_dispatch.rescue_responses
                 config.action_dispatch.rescue_responses.merge!(rescue_responses)
